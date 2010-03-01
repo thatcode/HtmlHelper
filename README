@@ -1,0 +1,10 @@
+This is an expansion of the default HTML helper that copes with html/xhtml tags automatically.
+
+How it works:
+   In app_controller set e.g
+      var $helpers = array('Html' => array('html4-strict'));
+
+   If it doesn't work, set this as the first array item.
+   The helper takes the option, and populates the $tags array from a $__tags array with both html and xhtml elements in.
+
+   No method changes - this really is it!
