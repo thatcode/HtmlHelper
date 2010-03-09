@@ -269,6 +269,9 @@ class HtmlHelper extends AppHelper {
  * @access public
  */
 	function docType($type = 'xhtml-strict') {
+		if ($type === null) {
+			$type = $this->docType;
+		}
 		if (isset($this->__docTypes[$type])) {
 			return $this->__docTypes[$type];
 		} elseif (isset($this->__docTypes[$this->docType])) {
